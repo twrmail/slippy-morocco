@@ -16,7 +16,7 @@ The displayed geographic data is from OpenStreetMap contributors, snapshot `moro
 The study rectangle is provisional and is not an administrative boundary. The data is not a completeness or authority claim.
 
 ## External dependency
-MapLibre GL JS and its stylesheet are loaded from the pinned jsDelivr package URL (`maplibre-gl@5.6.2`). The application does not use the public OpenStreetMap rendered-tile service. The first version needs an internet connection to load the MapLibre library; the service worker caches the same-origin app shell but does not promise a fully offline map.
+MapLibre GL JS and its stylesheet are loaded from the pinned jsDelivr package URL (`maplibre-gl@5.6.2`); road-name labels use the OpenMapTiles hosted glyph endpoint. The application does not use the public OpenStreetMap rendered-tile service. The first version needs an internet connection to load the MapLibre library; the service worker caches the same-origin app shell but does not promise a fully offline map.
 
 ## Deliberate exclusions
 No routing, buildings, terrain, tourism, visitor services, transit, stadium information, language lessons, or additional source datasets.
