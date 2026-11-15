@@ -1,27 +1,18 @@
 name: Build Rabat OSM base data
-# Reproducible, pinned OSM extraction; generated outputs are committed to this branch.
 
 on:
-  push:
-    branches:
-      - rabat-osm-base-and-permission-requests
-    paths:
-      - ".github/workflows/build-rabat-base.yml"
-      - "scripts/build-rabat-base.sh"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: Check out working branch
+      - name: Check out selected branch
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref_name }}
 
       - name: Install extraction tools
         run: |
@@ -31,16 +22,10 @@ jobs:
       - name: Build Rabat roads and water layers
         run: bash scripts/build-rabat-base.sh
 
-      - name: Commit generated base data to this working branch
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin "$GITHUB_REF_NAME"
-          git rebase "origin/$GITHUB_REF_NAME"
-          git add data/rabat/*.geojson data/rabat/manifest.json
-          if git diff --cached --quiet; then
-            echo "Generated data are unchanged."
-            exit 0
-          fi
-          git commit -m "Add generated Rabat OSM roads and water base layers"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+      - name: Upload generated layers and manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: rabat-osm-roads-water
+          path: data/rabat/
+          if-no-files-found: error
+          retention-days: 30
