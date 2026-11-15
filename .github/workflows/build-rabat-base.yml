@@ -1,0 +1,42 @@
+name: Build Rabat OSM base data
+
+on:
+  push:
+    branches:
+      - rabat-osm-base-and-permission-requests
+    paths:
+      - ".github/workflows/build-rabat-base.yml"
+      - "scripts/build-rabat-base.sh"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out working branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Install extraction tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes osmium-tool gdal-bin
+
+      - name: Build Rabat roads and water layers
+        run: bash scripts/build-rabat-base.sh
+
+      - name: Commit generated base data to this working branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/rabat/*.geojson data/rabat/manifest.json
+          if git diff --cached --quiet; then
+            echo "Generated data are unchanged."
+            exit 0
+          fi
+          git commit -m "Add generated Rabat OSM roads and water base layers"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
