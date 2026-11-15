@@ -17,9 +17,9 @@ It is a working clip boundary, not an official administrative boundary.
 
 ## Source and rights
 
-The base is derived from OpenStreetMap data distributed by Geofabrik. OSM data is licensed under the Open Database License (ODbL) 1.0. Attribute the data to OpenStreetMap contributors and link to https://www.openstreetmap.org/copyright. Review ODbL obligations before distributing a database or derivative database.
+The base is derived from OpenStreetMap data distributed by OpenStreetMap France extract mirror. OSM data is licensed under the Open Database License (ODbL) 1.0. Attribute the data to OpenStreetMap contributors and link to https://www.openstreetmap.org/copyright. Review ODbL obligations before distributing a database or derivative database.
 
-Geofabrik source page: https://download.geofabrik.de/africa/morocco.html
+Geofabrik source page: https://download.openstreetmap.fr/extracts/africa/
 
 No OSM public tile imagery is copied. These are vector data derived from the OSM database.
 
