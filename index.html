@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f0e7">
+  <meta name="description" content="An independent, source-traceable map of Rabat, Salé and the Bouregreg.">
+  <title>Rabat 2030 — Map</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.2/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="./css/map.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">R</span><div><h1>Rabat <span>2030</span></h1><p>Rabat · Salé · Bouregreg</p></div></div>
+      <button id="install-button" class="install-button" type="button" hidden>Install app</button>
+    </header>
+    <section class="map-frame" aria-label="Map of Rabat and Salé">
+      <div id="map" role="application" aria-label="Interactive map. Use plus and minus to zoom and drag to pan."></div>
+      <div id="map-status" class="map-status" role="status" aria-live="polite">Loading map…</div>
+    </section>
+    <footer class="map-footer"><span>Roads &amp; water · Working geographic base</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a></footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
+  <script src="./js/app.js" defer></script>
+</body>
+</html>
