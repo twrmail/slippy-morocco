@@ -1,4 +1,5 @@
 name: Build Rabat OSM base data
+# Reproducible, pinned OSM extraction; generated outputs are committed to this branch.
 
 on:
   push:
