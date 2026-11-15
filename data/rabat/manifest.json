@@ -1,0 +1,44 @@
+{
+  "project": "slippy-morocco",
+  "area": "Rabat-Sale-Bouregreg provisional study window",
+  "source": "OpenStreetMap contributors via OpenStreetMap France extract mirror",
+  "source_url": "https://download.openstreetmap.fr/extracts/africa/morocco.osm.pbf",
+  "source_snapshot": "morocco-2026-10-27",
+  "source_pbf_sha256": "52af8942273bfc2ffc016d317ae021f0fe56891b14b8d558433bc072ed8ca290",
+  "source_pbf_bytes": 276935646,
+  "acquired_at_utc": "2026-11-15T12:25:48.575367+00:00",
+  "bbox_west_south_east_north": [
+    -6.98,
+    33.9,
+    -6.7,
+    34.12
+  ],
+  "crs": "OGC:CRS84 / WGS 84 longitude-latitude (GeoJSON RFC 7946)",
+  "license": "Open Database License (ODbL) 1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "attribution_url": "https://www.openstreetmap.org/copyright",
+  "outputs": {
+    "roads.geojson": {
+      "feature_count": 33956,
+      "bytes": 18437180,
+      "sha256": "ad7fd183018daf4be68d473f97763e1069e03387b1584358444876c70927c1d7"
+    },
+    "water-lines.geojson": {
+      "feature_count": 44,
+      "bytes": 92456,
+      "sha256": "44e76facc91203dfd7900261f3e5c3b289137ffeb61053daaf1c3d3a74525e3f"
+    },
+    "water-areas.geojson": {
+      "feature_count": 58,
+      "bytes": 159074,
+      "sha256": "08f3c1d5395db912a93f32c10ac46d3bb4993c903d50642157287b522ea1c9e4"
+    }
+  },
+  "notes": [
+    "Working base data only; not an authoritative or completeness claim.",
+    "Roads are OSM ways tagged highway.",
+    "Water lines include mapped waterways and coastline ways.",
+    "Water areas include mapped water, reservoir, lake, pond and riverbank polygons.",
+    "Raw PBF is a temporary build input and is not committed."
+  ]
+}
