@@ -1,0 +1,7 @@
+{
+  "id":"./","name":"Rabat 2030 Map","short_name":"Rabat Map",
+  "description":"A source-traceable roads and water map of Rabat and Salé.",
+  "start_url":"./","scope":"./","display":"standalone",
+  "background_color":"#f4f0e7","theme_color":"#f4f0e7",
+  "icons":[{"src":"./icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
