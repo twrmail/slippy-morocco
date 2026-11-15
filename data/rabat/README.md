@@ -19,12 +19,12 @@ It is a working clip boundary, not an official administrative boundary.
 
 The base is derived from OpenStreetMap data distributed by OpenStreetMap France extract mirror. OSM data is licensed under the Open Database License (ODbL) 1.0. Attribute the data to OpenStreetMap contributors and link to https://www.openstreetmap.org/copyright. Review ODbL obligations before distributing a database or derivative database.
 
-Geofabrik source page: https://download.openstreetmap.fr/extracts/africa/
+OpenStreetMap France extract directory: https://download.openstreetmap.fr/extracts/africa/
 
 No OSM public tile imagery is copied. These are vector data derived from the OSM database.
 
 ## Reproducibility
 
-The build workflow downloads a dated Morocco PBF snapshot, records its SHA-256 checksum, clips it to the provisional study window, exports the selected feature classes, and writes a manifest. The PBF itself is a temporary build input and is not committed.
+The first build used the mirror's Morocco PBF snapshot dated 2026-10-27. It recorded a SHA-256 checksum of `52af8942273bfc2ffc016d317ae021f0fe56891b14b8d558433bc072ed8ca290` and exported 33,956 road ways, 44 water/coastline lines and 58 water-area polygons. The PBF itself is a temporary build input and is not committed. The `smart` extract strategy preserves complete ways and relation members, so features crossing the rectangle edge may extend beyond the nominal bbox.
 
 The data are a working base, not a claim that OSM is complete or authoritative. Official classified-road data and other sources will remain separate until their provenance and reuse rights are resolved.
