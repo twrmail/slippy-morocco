@@ -27,4 +27,4 @@ The initial study area is Rabat–Salé and the Bouregreg corridor, with enough 
 
 ## Status
 
-Research and rights documentation are in place. The first OSM roads-and-water base build is being prepared from a dated Geofabrik Morocco extract. OSM is the working source under ODbL 1.0; CNER classified-road data and SIG Maroc layers remain separate candidates pending provenance and written reuse clarification.
+Research and rights documentation are in place. The first OSM roads-and-water base has been generated and validated from the 2026-10-27 Morocco extract mirror snapshot. It contains 33,956 road ways, 44 water/coastline lines and 58 water-area polygons in the provisional window. The source snapshot, checksum, extraction bounds, output checksums and counts are recorded in `data/rabat/manifest.json`. OSM is the working source under ODbL 1.0; CNER classified-road data and SIG Maroc layers remain separate candidates pending provenance and written reuse clarification.
