@@ -1,0 +1,12 @@
+:root{color-scheme:light;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#24343a;background:#f4f0e7}
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}body{min-width:320px;overflow:hidden}
+.app{display:flex;flex-direction:column;width:100%;height:100%;min-height:100dvh}
+.topbar{z-index:2;display:flex;align-items:center;justify-content:space-between;min-height:68px;padding:10px clamp(14px,3vw,30px);background:#fbfaf6;border-bottom:1px solid #dedbd2}
+.brand{display:flex;align-items:center;gap:11px}.brand-mark{display:grid;place-items:center;width:39px;height:39px;border-radius:12px;color:#fff;background:#276779;font-family:Georgia,serif;font-size:24px}
+.brand h1{margin:0;font-size:17px;line-height:1.2;font-weight:700;letter-spacing:.01em}.brand h1 span{color:#56808a;font-weight:500}.brand p{margin:3px 0 0;color:#68777a;font-size:11px;letter-spacing:.04em}
+.install-button{border:1px solid #b8c9c9;border-radius:999px;padding:8px 13px;color:#245565;background:#fff;font:inherit;font-size:12px;font-weight:650}.install-button[hidden]{display:none}
+.map-frame{position:relative;flex:1;min-height:0;background:#d7eaf0}#map{position:absolute;inset:0}
+.map-status{position:absolute;left:14px;bottom:14px;z-index:1;max-width:min(80%,360px);padding:7px 10px;border:1px solid rgba(67,91,96,.15);border-radius:8px;color:#52666b;background:rgba(251,250,246,.94);font-size:11px;box-shadow:0 2px 10px rgba(35,55,60,.08);pointer-events:none}.map-status:empty{display:none}
+.map-footer{display:flex;justify-content:space-between;gap:12px;padding:9px 16px;color:#657276;background:#fbfaf6;border-top:1px solid #dedbd2;font-size:10px;line-height:1.4}
+.map-footer a{color:#356a78;text-decoration:none;white-space:nowrap}.map-footer a:hover{text-decoration:underline}.maplibregl-ctrl-group{border-radius:9px!important;overflow:hidden}.maplibregl-ctrl button{width:34px!important;height:34px!important}
+@media(max-width:540px){.topbar{min-height:60px;padding:8px 12px}.brand-mark{width:35px;height:35px}.brand h1{font-size:16px}.map-footer{padding:8px 11px;font-size:9px}.map-status{left:10px;bottom:10px}}
