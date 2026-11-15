@@ -3,23 +3,23 @@ set -euo pipefail
 
 # Provisional Rabat–Salé / Bouregreg / Atlantic study window.
 BBOX="-6.98,33.90,-6.70,34.12"
-SNAPSHOT="morocco-261114"
-PBF_URL="https://download.geofabrik.de/africa/${SNAPSHOT}.osm.pbf"
+SNAPSHOT="morocco-2026-10-27"
+PBF_URL="https://download.openstreetmap.fr/extracts/africa/morocco.osm.pbf"
 WORK_DIR="${RUNNER_TEMP:-/tmp}/rabat-osm-build"
 OUT_DIR="data/rabat"
 
 mkdir -p "$WORK_DIR" "$OUT_DIR"
-PBF="$WORK_DIR/${SNAPSHOT}.osm.pbf"
+PBF="$WORK_DIR/morocco.osm.pbf"
 CLIPPED="$WORK_DIR/rabat-area.osm.pbf"
 
-echo "Downloading pinned Geofabrik snapshot: $PBF_URL"
+echo "Downloading OpenStreetMap France Africa mirror: $PBF_URL"
 curl --fail --location --retry 3 --retry-delay 5 "$PBF_URL" --output "$PBF"
 
 PBF_SHA256="$(sha256sum "$PBF" | awk '{print $1}')"
 PBF_SIZE="$(stat -c '%s' "$PBF")"
 
-echo "Clipping complete OSM ways to provisional Rabat bbox: $BBOX"
-osmium extract --bbox="$BBOX" --strategy=complete_ways --output="$CLIPPED" "$PBF"
+echo "Clipping complete ways and relation members to provisional Rabat bbox: $BBOX"
+osmium extract --bbox="$BBOX" --strategy=smart --output="$CLIPPED" "$PBF"
 
 echo "Exporting roads"
 ogr2ogr -f GeoJSON -t_srs EPSG:4326 \
@@ -65,7 +65,7 @@ for filename in ("roads.geojson", "water-lines.geojson", "water-areas.geojson"):
 manifest = {
     "project": "slippy-morocco",
     "area": "Rabat-Sale-Bouregreg provisional study window",
-    "source": "OpenStreetMap contributors via Geofabrik",
+    "source": "OpenStreetMap contributors via OpenStreetMap France extract mirror",
     "source_url": pbf_url,
     "source_snapshot": snapshot,
     "source_pbf_sha256": pbf_sha256,
