@@ -6,7 +6,7 @@
 
   const map = new maplibregl.Map({
     container:"map", attributionControl:false,
-    style:{version:8,sources:{},layers:[{id:"background",type:"background",paint:{"background-color":"#e9e5da"}}]},
+    style:{version:8,glyphs:"https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",sources:{},layers:[{id:"background",type:"background",paint:{"background-color":"#e9e5da"}}]},
     center:[-6.84,34.02],zoom:11.2,minZoom:9,maxZoom:19,
     maxBounds:[[-7.05,33.84],[-6.62,34.18]]
   });
