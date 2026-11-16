@@ -1,6 +1,8 @@
 # Netlify custom headers (applies when the package root is the published site).
 /sw.js
   Cache-Control: no-cache
+/check.html
+  Cache-Control: no-cache
 /manifest.webmanifest
   Content-Type: application/manifest+json
   Cache-Control: no-cache

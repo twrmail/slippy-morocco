@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Slippy compression check</title>
+  <style>
+    body{margin:0;font:18px/1.45 -apple-system,system-ui,sans-serif;color:#1d2b3a;background:#fbfaf6}
+    main{max-width:34rem;margin:0 auto;padding:1.5rem 1.2rem 3rem}
+    h1{font-size:1.4rem;margin:.2rem 0 .6rem}
+    button{font:inherit;font-weight:600;padding:.8rem 1.4rem;border:0;border-radius:.7rem;background:#0f2350;color:#fff}
+    button:disabled{opacity:.5}
+    pre{white-space:pre-wrap;background:#fff;border:1px solid #ddd8cb;border-radius:.7rem;padding:1rem;margin-top:1.2rem;min-height:3rem}
+    .ok{color:#14733a}.bad{color:#b3261e}
+    small{color:#5b6670}
+  </style>
+</head>
+<body>
+<main>
+  <h1>Slippy compression check</h1>
+  <p>Tap the button. This downloads the big road file once and shows how much actually travelled over the network.</p>
+  <button id="run" type="button">Run check</button>
+  <pre id="out" aria-live="polite">Not run yet.</pre>
+  <p><small>Test page only; nothing here is part of the map. Safe to ignore or delete later.</small></p>
+</main>
+<script>
+(() => {
+  "use strict";
+  const out = document.getElementById("out"), btn = document.getElementById("run");
+  const mb = (n) => (n / 1e6).toFixed(2) + " MB";
+  const show = (text, cls) => { out.className = cls || ""; out.textContent = text; };
+
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; show("Downloading… (about 18 MB the first time; this can take a few seconds)");
+    const url = new URL("./data/rabat/roads.geojson", location.href);
+    url.searchParams.set("compression-check", String(Date.now())); // unique, so nothing is served from a cache
+    try {
+      const t0 = performance.now();
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error("Server answered " + res.status + " " + res.statusText);
+      const full = (await res.arrayBuffer()).byteLength;
+      const secs = ((performance.now() - t0) / 1000).toFixed(1);
+      await new Promise((r) => setTimeout(r, 300)); // let the browser publish its timing entry
+      const entry = performance.getEntriesByName(url.href).pop();
+      const wire = entry && entry.encodedBodySize ? entry.encodedBodySize : 0;
+      const enc = res.headers.get("content-encoding") || "(none shown)";
+      const lines = [
+        "Full file size:        " + mb(full),
+        wire ? "Downloaded (on the wire): " + mb(wire) : "Downloaded (on the wire): the browser did not report this",
+        "Content-Encoding:      " + enc,
+        "Content-Type:          " + (res.headers.get("content-type") || "?"),
+        "Time:                  " + secs + " s",
+      ];
+      let verdict, cls;
+      if (wire && wire < full * 0.7) { verdict = "COMPRESSED: only " + Math.round(100 * wire / full) + "% of the file travelled. Good."; cls = "ok"; }
+      else if (wire) { verdict = "NOT COMPRESSED: the full file travelled. Tell Claude."; cls = "bad"; }
+      else if (/br|gzip|deflate/.test(enc)) { verdict = "Probably compressed (" + enc + "), but the browser gave no size."; cls = "ok"; }
+      else { verdict = "Could not tell. Copy these lines to Claude."; cls = "bad"; }
+      show(lines.join("\n") + "\n\n" + verdict, cls);
+    } catch (err) {
+      show("The road file did not load.\n" + err.message + "\n\nTell Claude exactly this text.", "bad");
+    } finally { btn.disabled = false; }
+  });
+})();
+</script>
+</body>
+</html>

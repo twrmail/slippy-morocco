@@ -21,13 +21,13 @@ const has = (rel) => existsSync(path.join(root, rel));
 const read = (rel) => readFileSync(path.join(root, rel), "utf8");
 
 // 1. Required files at the ZIP root (no wrapper folder).
-const required = ["index.html", "manifest.webmanifest", "sw.js", "_headers", "css/map.css", "js/app.js",
+const required = ["index.html", "check.html", "manifest.webmanifest", "sw.js", "_headers", "css/map.css", "js/app.js",
   "icons/favicon-48.png", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-192.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png",
   "data/rabat/roads.geojson", "data/rabat/water-lines.geojson", "data/rabat/water-areas.geojson", "data/rabat/sea.geojson", "data/rabat/manifest.json"];
 for (const rel of required) if (!has(rel)) fail("Missing from ZIP root: " + rel);
 
 // 2. Nothing unexpected (repo docs, scripts, workflows, source assets must not ship).
-const allowed = /^(index\.html|manifest\.webmanifest|sw\.js|_headers|css\/[^/]+|js\/[^/]+|icons\/[^/]+|data\/rabat\/[^/]+)$/;
+const allowed = /^(index\.html|check\.html|manifest\.webmanifest|sw\.js|_headers|css\/[^/]+|js\/[^/]+|icons\/[^/]+|data\/rabat\/[^/]+)$/;
 for (const rel of files) if (!allowed.test(rel)) fail("Unexpected file in ZIP: " + rel);
 
 // 3. Every local reference must resolve inside the package, and use relative paths.
