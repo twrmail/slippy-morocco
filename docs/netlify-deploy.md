@@ -48,7 +48,8 @@ So offline, the app opens its frame and shows "The map library could not load. C
 
 No OpenStreetMap public tile servers are used; the map is drawn from the repository's own GeoJSON files.
 
-## Known things to look at after deploying
+## Known limitations
 
-- Street-name labels appear only when zoomed in (zoom 14+). Many road names are bilingual (Latin + Arabic script). The hosted font may not draw Arabic letters, so some labels could look incomplete. This could not be checked from the build environment (no access to the font server); please zoom into the city and tell us what you see.
+- **Street names are shown in French/Latin script only, for now.** Many road names are stored in two scripts (Latin + Arabic). The hosted label font has no Arabic letters, so only the Latin part draws. This is accepted for the first version (the likely users are visitors); adding Arabic labels would need an Arabic-capable font plus a text-shaping add-on from another website, and is a later decision. Labels appear when zoomed in (zoom 14+); confirmed working on an iPhone.
 - The Atlantic Ocean is the same beige as land (the data has coastline lines but no sea polygon). The blue coastline marks the edge.
+- **iPhone (iOS 26) header softness:** the header text looked slightly blurred when the app was opened from the home screen. Nothing in the app's CSS blurs it; the likely cause is an iOS 26 edge effect. The page is now fixed to the screen (no document scrolling) as a precaution; if it still looks soft, the cause is not yet understood.
