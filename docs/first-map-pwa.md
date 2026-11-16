@@ -7,7 +7,7 @@ A first visual application for the existing Rabat–Salé roads-and-water datase
 - MapLibre GL JS rendering.
 - Existing roads, water-lines and water-areas GeoJSON layers.
 - A restrained mobile-first map interface with pan and zoom.
-- PWA manifest, Slippy compact icons (SVG, 192/512 PNG, maskable, Apple touch icon) and a small service-worker cache for the application shell (network-first, so a new deploy shows on the next online visit).
+- PWA manifest, Slippy app icons made from the original logo (192/512 PNG, maskable, Apple touch icon, favicon) and a small service-worker cache for the application shell (network-first, so a new deploy shows on the next online visit).
 - Visible OpenStreetMap attribution.
 
 ## Data and licensing

@@ -22,7 +22,7 @@ const read = (rel) => readFileSync(path.join(root, rel), "utf8");
 
 // 1. Required files at the ZIP root (no wrapper folder).
 const required = ["index.html", "manifest.webmanifest", "sw.js", "_headers", "css/map.css", "js/app.js",
-  "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-192.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png",
+  "icons/favicon-48.png", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-192.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png",
   "data/rabat/roads.geojson", "data/rabat/water-lines.geojson", "data/rabat/water-areas.geojson", "data/rabat/manifest.json"];
 for (const rel of required) if (!has(rel)) fail("Missing from ZIP root: " + rel);
 

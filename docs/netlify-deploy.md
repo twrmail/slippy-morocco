@@ -33,7 +33,7 @@ Open the site in your Netlify dashboard → **Deploys**, and drag the new folder
 
 - **Desktop:** the map shows Rabat and Salé roads, the Bouregreg and the Atlantic coastline; the bottom bar shows "© OpenStreetMap contributors". Loading takes a few seconds because the road data is large (about 18 MB raw; much smaller if Netlify compresses it).
 - **Phone:** open the same address. Android Chrome offers **Install app** (and shows an "Install app" button in the header when the browser allows it). On iPhone Safari, use **Share → Add to Home Screen**.
-- **Icons:** the installed app should show the Slippy globe icon.
+- **Icons:** the installed app should show your Slippy logo (the soccer-ball globe).
 
 ## What works offline, and what does not
 

@@ -14,7 +14,7 @@ This is a geographic base layer, not yet a visitor product. Terrain, buildings, 
 
 ## The app and how to deploy it
 
-`index.html` at the repository root is the first Slippy Morocco map (MapLibre, roads and water only). A ready-to-upload Netlify package is built automatically by GitHub Actions (artifact `slippy-morocco-netlify-package`). Step-by-step instructions, what is cached and what needs the internet: [`docs/netlify-deploy.md`](docs/netlify-deploy.md). Logo source and the icon generator: `brand/`, `scripts/make-icons.py`.
+`index.html` at the repository root is the first Slippy Morocco map (MapLibre, roads and water only). A ready-to-upload Netlify package is built automatically by GitHub Actions (artifact `slippy-morocco-netlify-package`). Step-by-step instructions, what is cached and what needs the internet: [`docs/netlify-deploy.md`](docs/netlify-deploy.md). The app icons are made from the original Slippy logo in `brand/` (resize and padding only) by `scripts/make-icons.py`.
 
 ## Data principles
 

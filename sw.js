@@ -3,10 +3,10 @@
 // It does NOT cache the MapLibre library (jsDelivr), the map glyph fonts, or the
 // ~18 MB GeoJSON map data, so the map itself still needs an internet connection.
 // To release a change: bump CACHE_NAME (old caches are deleted on activate).
-const CACHE_NAME = "slippy-morocco-shell-v2";
+const CACHE_NAME = "slippy-morocco-shell-v3";
 const APP_SHELL = [
   "./", "./index.html", "./css/map.css", "./js/app.js", "./manifest.webmanifest",
-  "./icons/icon.svg", "./icons/icon-192.png", "./icons/icon-512.png",
+  "./icons/favicon-48.png", "./icons/icon-192.png", "./icons/icon-512.png",
   "./icons/icon-maskable-192.png", "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png"
 ];
 const SHELL_URLS = new Set(APP_SHELL.map((path) => new URL(path, self.location).href));
