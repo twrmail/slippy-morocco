@@ -35,6 +35,10 @@ Open the site in your Netlify dashboard → **Deploys**, and drag the new folder
 - **Phone:** open the same address. Android Chrome offers **Install app** (and shows an "Install app" button in the header when the browser allows it). On iPhone Safari, use **Share → Add to Home Screen**.
 - **Icons:** the installed app should show your Slippy logo (the soccer-ball globe).
 
+## Compression check page
+
+`/check.html` (e.g. `https://your-name.netlify.app/check.html`) is a one-tap test page. It downloads the large road file and shows how much actually travelled over the network, so you can confirm Netlify is compressing it. It is not linked from the map and can be deleted once you are satisfied.
+
 ## What works offline, and what does not
 
 | Part | Where it comes from | Offline? |
