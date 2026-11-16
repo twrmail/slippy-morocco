@@ -1,5 +1,5 @@
 import { readFileSync, existsSync } from "node:fs";
-const required=["index.html","manifest.webmanifest","sw.js","css/map.css","js/app.js","icons/icon.svg","data/rabat/roads.geojson","data/rabat/water-lines.geojson","data/rabat/water-areas.geojson","data/rabat/manifest.json"];
+const required=["index.html","manifest.webmanifest","sw.js","css/map.css","js/app.js","icons/icon.svg","icons/icon-192.png","icons/icon-512.png","icons/icon-maskable-192.png","icons/icon-maskable-512.png","icons/apple-touch-icon.png","_headers","data/rabat/roads.geojson","data/rabat/water-lines.geojson","data/rabat/water-areas.geojson","data/rabat/manifest.json"];
 const missing=required.filter((path)=>!existsSync(path));
 if(missing.length){console.error("Missing required files:",missing.join(", "));process.exit(1);}
 const pwa=JSON.parse(readFileSync("manifest.webmanifest","utf8"));

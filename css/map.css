@@ -2,7 +2,7 @@
 *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}body{min-width:320px;overflow:hidden}
 .app{display:flex;flex-direction:column;width:100%;height:100%;min-height:100dvh}
 .topbar{z-index:2;display:flex;align-items:center;justify-content:space-between;min-height:68px;padding:10px clamp(14px,3vw,30px);background:#fbfaf6;border-bottom:1px solid #dedbd2}
-.brand{display:flex;align-items:center;gap:11px}.brand-mark{display:grid;place-items:center;width:39px;height:39px;border-radius:12px;color:#fff;background:#276779;font-family:Georgia,serif;font-size:24px}
+.brand{display:flex;align-items:center;gap:11px}.brand-mark{display:block;width:39px;height:39px;border-radius:10px}
 .brand h1{margin:0;font-size:17px;line-height:1.2;font-weight:700;letter-spacing:.01em}.brand h1 span{color:#56808a;font-weight:500}.brand p{margin:3px 0 0;color:#68777a;font-size:11px;letter-spacing:.04em}
 .install-button{border:1px solid #b8c9c9;border-radius:999px;padding:8px 13px;color:#245565;background:#fff;font:inherit;font-size:12px;font-weight:650}.install-button[hidden]{display:none}
 .map-frame{position:relative;flex:1;min-height:0;background:#d7eaf0}#map{position:absolute;inset:0}

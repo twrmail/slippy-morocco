@@ -1,7 +1,19 @@
 {
-  "id":"./","name":"Rabat 2030 Map","short_name":"Rabat Map",
-  "description":"A source-traceable roads and water map of Rabat and Salé.",
-  "start_url":"./","scope":"./","display":"standalone",
-  "background_color":"#f4f0e7","theme_color":"#f4f0e7",
-  "icons":[{"src":"./icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+  "id": "./",
+  "name": "Slippy Morocco",
+  "short_name": "Slippy",
+  "description": "An independent, source-traceable roads and water map of Rabat and Salé.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f2350",
+  "theme_color": "#fbfaf6",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "./icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "./icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
 }

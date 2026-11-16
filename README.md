@@ -12,6 +12,10 @@ The first working map is deliberately limited to:
 
 This is a geographic base layer, not yet a visitor product. Terrain, buildings, land cover, transit, routing, tourism, tours, language lessons, stadium guides and visitor services are later decisions, not prerequisites for this milestone.
 
+## The app and how to deploy it
+
+`index.html` at the repository root is the first Slippy Morocco map (MapLibre, roads and water only). A ready-to-upload Netlify package is built automatically by GitHub Actions (artifact `slippy-morocco-netlify-package`). Step-by-step instructions, what is cached and what needs the internet: [`docs/netlify-deploy.md`](docs/netlify-deploy.md). Logo source and the icon generator: `brand/`, `scripts/make-icons.py`.
+
 ## Data principles
 
 1. Every dataset must have a recorded source, acquisition date, version or checksum where available, and license/terms assessment.
