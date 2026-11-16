@@ -3,7 +3,7 @@
 // It does NOT cache the MapLibre library (jsDelivr), the map glyph fonts, or the
 // ~18 MB GeoJSON map data, so the map itself still needs an internet connection.
 // To release a change: bump CACHE_NAME (old caches are deleted on activate).
-const CACHE_NAME = "slippy-morocco-shell-v4";
+const CACHE_NAME = "slippy-morocco-shell-v5";
 const APP_SHELL = [
   "./", "./index.html", "./css/map.css", "./js/app.js", "./manifest.webmanifest",
   "./icons/favicon-48.png", "./icons/icon-192.png", "./icons/icon-512.png",

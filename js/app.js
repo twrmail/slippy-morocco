@@ -13,9 +13,11 @@
   map.addControl(new maplibregl.NavigationControl({showCompass:false}),"top-right");
 
   map.on("load",()=>{
+    map.addSource("sea",{type:"geojson",data:"./data/rabat/sea.geojson"});
     map.addSource("water-areas",{type:"geojson",data:"./data/rabat/water-areas.geojson"});
     map.addSource("water-lines",{type:"geojson",data:"./data/rabat/water-lines.geojson"});
     map.addSource("roads",{type:"geojson",data:"./data/rabat/roads.geojson"});
+    map.addLayer({id:"sea-fill",type:"fill",source:"sea",paint:{"fill-color":"#b8dce6"}});
     map.addLayer({id:"water-areas-fill",type:"fill",source:"water-areas",paint:{"fill-color":"#b8dce6","fill-opacity":.96}});
     map.addLayer({id:"water-lines-casing",type:"line",source:"water-lines",paint:{"line-color":"#a4cfdb","line-width":["interpolate",["linear"],["zoom"],8,1.2,14,4,18,9]}});
     map.addLayer({id:"water-lines",type:"line",source:"water-lines",paint:{"line-color":"#78b8ca","line-width":["interpolate",["linear"],["zoom"],8,.7,14,2.5,18,6]}});

@@ -40,5 +40,14 @@
     "Water lines include mapped waterways and coastline ways.",
     "Water areas include mapped water, reservoir, lake, pond and riverbank polygons.",
     "Raw PBF is a temporary build input and is not committed."
-  ]
+  ],
+  "derived": {
+    "sea.geojson": {
+      "feature_count": 1,
+      "bytes": 41616,
+      "sha256": "529ca67b051f6ed1f888d4c1e2a8ec5591ac1d794f2d059b7b2e956bc0adabd1",
+      "method": "Derived by scripts/build-sea.py from the natural=coastline ways in water-lines.geojson (OSM: sea is on the right of a coastline way). Inside the study window it follows the OSM coastline; outside it the boundary is a straight-line extension, not map data.",
+      "license": "ODbL 1.0, (c) OpenStreetMap contributors"
+    }
+  }
 }

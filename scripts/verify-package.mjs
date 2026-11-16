@@ -23,7 +23,7 @@ const read = (rel) => readFileSync(path.join(root, rel), "utf8");
 // 1. Required files at the ZIP root (no wrapper folder).
 const required = ["index.html", "manifest.webmanifest", "sw.js", "_headers", "css/map.css", "js/app.js",
   "icons/favicon-48.png", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-192.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png",
-  "data/rabat/roads.geojson", "data/rabat/water-lines.geojson", "data/rabat/water-areas.geojson", "data/rabat/manifest.json"];
+  "data/rabat/roads.geojson", "data/rabat/water-lines.geojson", "data/rabat/water-areas.geojson", "data/rabat/sea.geojson", "data/rabat/manifest.json"];
 for (const rel of required) if (!has(rel)) fail("Missing from ZIP root: " + rel);
 
 // 2. Nothing unexpected (repo docs, scripts, workflows, source assets must not ship).
@@ -55,7 +55,7 @@ if (man.icons.some((i) => /any maskable|maskable any/.test(i.purpose || ""))) fa
 
 // 5. Data integrity: GeoJSON bytes match the checksums recorded in data/rabat/manifest.json.
 const dataManifest = JSON.parse(read("data/rabat/manifest.json"));
-for (const [name, info] of Object.entries(dataManifest.outputs)) {
+for (const [name, info] of Object.entries({ ...dataManifest.outputs, ...(dataManifest.derived || {}) })) {
   if (!has("data/rabat/" + name)) { fail("Missing data file: " + name); continue; }
   const sha = createHash("sha256").update(readFileSync(path.join(root, "data/rabat", name))).digest("hex");
   if (sha !== info.sha256) fail(`Checksum mismatch for ${name}`);
