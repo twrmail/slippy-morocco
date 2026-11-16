@@ -2,6 +2,8 @@ name: Validate Rabat map app
 on:
   pull_request:
     branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -18,4 +20,16 @@ jobs:
       - name: Validate application and geographic data
         run: node scripts/validate-map-app.mjs
       - name: Check JavaScript syntax
-        run: node --check js/app.js
+        run: |
+          node --check js/app.js
+          node --check sw.js
+      - name: Build Netlify package
+        run: node scripts/build-netlify-package.mjs
+      - name: Verify the ZIP contains the complete deployment package
+        run: node scripts/verify-package.mjs dist/slippy-morocco-netlify.zip
+      - name: Upload Netlify package (download from the run page, unzip, drop on Netlify)
+        uses: actions/upload-artifact@v4
+        with:
+          name: slippy-morocco-netlify-package
+          path: dist/slippy-morocco-netlify/
+          if-no-files-found: error

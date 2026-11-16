@@ -1,0 +1,10 @@
+# Netlify custom headers (applies when the package root is the published site).
+/sw.js
+  Cache-Control: no-cache
+/manifest.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: no-cache
+# Served as application/json (MapLibre fetches it as JSON) so the ~18 MB roads file is eligible for compression.
+/data/rabat/*.geojson
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600
