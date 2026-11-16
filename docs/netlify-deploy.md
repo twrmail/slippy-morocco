@@ -41,7 +41,7 @@ Open the site in your Netlify dashboard → **Deploys**, and drag the new folder
 |---|---|---|
 | App shell: `index.html`, CSS, app JS, manifest, icons | Your Netlify site, cached by the service worker | Yes: the page frame opens offline |
 | MapLibre GL JS 5.6.2 (map engine and stylesheet) | `cdn.jsdelivr.net` | **No**: needs internet |
-| Road/water map data (`data/rabat/*.geojson`, about 18.7 MB) | Your Netlify site, **not** cached by the service worker | **No**: needs internet |
+| Road/water/sea map data (`data/rabat/*.geojson`, about 18.7 MB) | Your Netlify site, **not** cached by the service worker | **No**: needs internet |
 | Street-name label fonts (glyphs) | `fonts.openmaptiles.org` | **No**: needs internet |
 
 So offline, the app opens its frame and shows "The map library could not load. Check your connection and reload." **This version is not an offline map.** Making the map work offline (self-hosting MapLibre, caching the data, self-hosting fonts) is a separate, later decision.
@@ -51,5 +51,4 @@ No OpenStreetMap public tile servers are used; the map is drawn from the reposit
 ## Known limitations
 
 - **Street names are shown in French/Latin script only, for now.** Many road names are stored in two scripts (Latin + Arabic). The hosted label font has no Arabic letters, so only the Latin part draws. This is accepted for the first version (the likely users are visitors); adding Arabic labels would need an Arabic-capable font plus a text-shaping add-on from another website, and is a later decision. Labels appear when zoomed in (zoom 14+); confirmed working on an iPhone.
-- The Atlantic Ocean is the same beige as land (the data has coastline lines but no sea polygon). The blue coastline marks the edge.
 - **iPhone (iOS 26) header softness:** the header text looked slightly blurred when the app was opened from the home screen. Nothing in the app's CSS blurs it; the likely cause is an iOS 26 edge effect. The page is now fixed to the screen (no document scrolling) as a precaution; if it still looks soft, the cause is not yet understood.

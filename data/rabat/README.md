@@ -5,6 +5,7 @@ This directory is reserved for the first working base layers:
 - `roads.geojson` — OSM ways tagged `highway=*`
 - `water-lines.geojson` — OSM waterways and coastline ways
 - `water-areas.geojson` — OSM mapped water polygons
+- `sea.geojson` — Atlantic sea polygon **derived** from the OSM coastline ways in `water-lines.geojson` by `scripts/build-sea.py` (OSM puts the sea on the right of a coastline way). Inside the study window it follows OSM; beyond it the boundary is a straight-line extension (not map data, outside the area the app lets you pan to). Still ODbL, © OpenStreetMap contributors.
 - `manifest.json` — source snapshot, extraction boundary, attribution, checksums and feature counts
 
 ## Scope

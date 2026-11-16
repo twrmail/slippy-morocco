@@ -14,7 +14,7 @@ const ZIP = "dist/slippy-morocco-netlify.zip";
 const FILES = [
   "index.html", "manifest.webmanifest", "sw.js", "_headers",
   "css/map.css", "js/app.js",
-  "data/rabat/roads.geojson", "data/rabat/water-lines.geojson", "data/rabat/water-areas.geojson",
+  "data/rabat/roads.geojson", "data/rabat/water-lines.geojson", "data/rabat/water-areas.geojson", "data/rabat/sea.geojson",
   "data/rabat/manifest.json", "data/rabat/README.md",
 ];
 const ICON_DIR = "icons"; // every icon file (SVG + PNG) ships
