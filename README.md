@@ -14,7 +14,7 @@ This is a geographic base layer, not yet a visitor product. Terrain, buildings, 
 
 ## The app and how to deploy it
 
-`index.html` at the repository root is the first Slippy Morocco map (MapLibre, roads and water only). A ready-to-upload Netlify package is built automatically by GitHub Actions (artifact `slippy-morocco-netlify-package`). Step-by-step instructions, what is cached and what needs the internet: [`docs/netlify-deploy.md`](docs/netlify-deploy.md). A second tab, **Learn**, holds "FIFA Tour: Learn the Game", a short football-basics guide: an SVG pitch pinned at the top with ten lessons scrolling beneath it. Its wording is in `data/learn/en.json` (separate from the code so it can be translated) and it works offline. The app icons are made from the original Slippy logo in `brand/` (resize and padding only) by `scripts/make-icons.py`.
+`index.html` at the repository root is the first Slippy Morocco map (MapLibre, roads and water only). A ready-to-upload Netlify package is built automatically by GitHub Actions (artifact `slippy-morocco-netlify-package`). Step-by-step instructions, what is cached and what needs the internet: [`docs/netlify-deploy.md`](docs/netlify-deploy.md). A second tab, **Learn**, holds "Learn the Game", a short football-basics guide: an SVG pitch pinned at the top with ten lessons scrolling beneath it. Its wording is in `data/learn/en.json` (separate from the code so it can be translated) and it works offline. The app icons are made from the original Slippy logo in `brand/` (resize and padding only) by `scripts/make-icons.py`.
 
 ## Data principles
 

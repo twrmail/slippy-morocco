@@ -30,6 +30,7 @@ for(const lesson of learn.lessons){
  if(!focusKeys.includes(lesson.focus))throw new Error("Unknown pitch focus '"+lesson.focus+"' in lesson "+lesson.id);
 }
 for(const role of ["gk","def","mid","fwd","ref"])if(!learn.roles||!learn.roles[role]||!learn.roles[role].short||!learn.roles[role].name)throw new Error("Missing role text: "+role);
-if(!/not an official FIFA product/.test(learn.footer.independence))throw new Error("Independence notice missing from the Learn footer.");
+if(!/independent project/.test(learn.footer.independence))throw new Error("Independence notice missing from the Learn footer.");
+if(/fifa/i.test(JSON.stringify(learn))||/fifa/i.test(readFileSync("index.html","utf8")))throw new Error("The Learn guide must not use the FIFA name.");
 console.log("Learn the Game: "+learn.lessons.length+" lessons OK.");
 console.log("Rabat map app validation passed.");

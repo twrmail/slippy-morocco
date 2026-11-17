@@ -1,7 +1,6 @@
 {
   "lang": "en",
   "ui": {
-    "kicker": "FIFA Tour",
     "title": "Learn the Game",
     "subtitle": "Football basics",
     "pitchLabel": "A football pitch with two teams of eleven players, a referee and the ball at the centre spot",
@@ -174,6 +173,6 @@
     "source": "A simplified guide based on the IFAB Laws of the Game 2026/27. The full Laws are published at theifab.com.",
     "sourceLinkText": "theifab.com",
     "sourceLink": "https://www.theifab.com/",
-    "independence": "Slippy Morocco is an independent project. This guide is not an official FIFA product."
+    "independence": "Slippy Morocco is an independent project, not affiliated with any football governing body or tournament organiser."
   }
 }
