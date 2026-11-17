@@ -44,11 +44,12 @@ Open the site in your Netlify dashboard → **Deploys**, and drag the new folder
 | Part | Where it comes from | Offline? |
 |---|---|---|
 | App shell: `index.html`, CSS, app JS, manifest, icons | Your Netlify site, cached by the service worker | Yes: the page frame opens offline |
+| **Learn the Game** tab: `css/learn.css`, `js/learn.js`, `data/learn/en.json` | Your Netlify site, cached by the service worker | **Yes**: works fully offline after the app has been opened once online |
 | MapLibre GL JS 5.6.2 (map engine and stylesheet) | `cdn.jsdelivr.net` | **No**: needs internet |
 | Road/water/sea map data (`data/rabat/*.geojson`, about 18.7 MB) | Your Netlify site, **not** cached by the service worker | **No**: needs internet |
 | Street-name label fonts (glyphs) | `fonts.openmaptiles.org` | **No**: needs internet |
 
-So offline, the app opens its frame and shows "The map library could not load. Check your connection and reload." **This version is not an offline map.** Making the map work offline (self-hosting MapLibre, caching the data, self-hosting fonts) is a separate, later decision.
+So offline, the Learn tab works fully, and the Map tab shows "The map library could not load. Check your connection and reload." **This version is not an offline map.** Making the map work offline (self-hosting MapLibre, caching the data, self-hosting fonts) is a separate, later decision.
 
 No OpenStreetMap public tile servers are used; the map is drawn from the repository's own GeoJSON files.
 

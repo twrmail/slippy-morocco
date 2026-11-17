@@ -15,6 +15,7 @@
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.2/dist/maplibre-gl.css">
   <link rel="stylesheet" href="./css/map.css">
+  <link rel="stylesheet" href="./css/learn.css">
 </head>
 <body>
   <main class="app">
@@ -22,13 +23,54 @@
       <div class="brand"><img class="brand-mark" src="./icons/icon-192.png" alt="" width="39" height="39"><div><h1>Slippy <span>Morocco</span></h1><p>Rabat · Salé · Bouregreg</p></div></div>
       <button id="install-button" class="install-button" type="button" hidden>Install app</button>
     </header>
-    <section class="map-frame" aria-label="Map of Rabat and Salé">
-      <div id="map" role="application" aria-label="Interactive map. Use plus and minus to zoom and drag to pan."></div>
-      <div id="map-status" class="map-status" role="status" aria-live="polite">Loading map…</div>
-    </section>
+    <nav class="tabs" aria-label="Sections">
+      <button type="button" class="tab" data-view="map" aria-current="page">Map</button>
+      <button type="button" class="tab" data-view="learn">Learn</button>
+    </nav>
+    <div class="views">
+      <section id="map-view" class="map-frame" aria-label="Map of Rabat and Salé">
+        <div id="map" role="application" aria-label="Interactive map. Use plus and minus to zoom and drag to pan."></div>
+        <div id="map-status" class="map-status" role="status" aria-live="polite">Loading map…</div>
+      </section>
+      <section id="learn-view" class="learn" aria-label="Learn the game" hidden>
+        <div class="learn-inner">
+          <header class="learn-head">
+            <p class="learn-kicker" data-text="ui.kicker">FIFA Tour</p>
+            <h2 data-text="ui.title">Learn the Game</h2>
+            <p class="learn-sub" data-text="ui.subtitle">Football basics</p>
+          </header>
+          <div class="learn-body">
+            <div class="pitch-dock" id="pitch-dock">
+              <div class="pitch-frame">
+                <svg id="pitch" class="pitch" viewBox="-3 -3 111 74" role="img" aria-labelledby="pitch-title" data-focus="all">
+                  <title id="pitch-title">A football pitch with two teams of eleven players</title>
+                  <rect class="grass" x="-3" y="-3" width="111" height="74"/>
+                  <g class="stripes"><rect x="0" y="0" width="10.5" height="68"/><rect x="21" y="0" width="10.5" height="68"/><rect x="42" y="0" width="10.5" height="68"/><rect x="63" y="0" width="10.5" height="68"/><rect x="84" y="0" width="10.5" height="68"/></g>
+                  <g class="markings">
+                    <g class="m-edge"><rect x="0" y="0" width="105" height="68"/><path d="M1 0A1 1 0 0 1 0 1M104 0A1 1 0 0 0 105 1M0 67A1 1 0 0 1 1 68M105 67A1 1 0 0 0 104 68"/></g>
+                    <g class="m-centre"><line x1="52.5" y1="0" x2="52.5" y2="68"/><circle cx="52.5" cy="34" r="9.15"/><circle class="spot" cx="52.5" cy="34" r=".5"/></g>
+                    <g class="m-pen"><rect x="0" y="13.84" width="16.5" height="40.32"/><rect x="88.5" y="13.84" width="16.5" height="40.32"/><path d="M16.5 26.69A9.15 9.15 0 0 1 16.5 41.31M88.5 26.69A9.15 9.15 0 0 0 88.5 41.31"/><circle class="spot" cx="11" cy="34" r=".45"/><circle class="spot" cx="94" cy="34" r=".45"/></g>
+                    <g class="m-goalarea"><rect x="0" y="24.84" width="5.5" height="18.32"/><rect x="99.5" y="24.84" width="5.5" height="18.32"/></g>
+                  </g>
+                  <g class="goals"><rect x="-2.2" y="30.34" width="2.2" height="7.32"/><rect x="105" y="30.34" width="2.2" height="7.32"/></g>
+                  <line class="offside-line" x1="87" y1="0" x2="87" y2="68"/>
+                  <g class="pass"><line x1="33.3" y1="26.76" x2="42.6" y2="28.9"/><polygon points="44,29.2 41.6,29.78 42.1,27.64"/></g>
+                  <g id="players"></g>
+                  <circle class="ball" cx="52.5" cy="34" r="1.1"/>
+                </svg>
+              </div>
+              <div class="role-key" id="role-key" role="group" aria-label="Tap a position to see it on the pitch"></div>
+            </div>
+            <article class="lessons" id="lessons" aria-live="polite"></article>
+          </div>
+          <footer class="learn-foot" id="learn-foot"></footer>
+        </div>
+      </section>
+    </div>
     <footer class="map-footer"><span>Roads &amp; water · Working geographic base</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a></footer>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
   <script src="./js/app.js" defer></script>
+  <script src="./js/learn.js" defer></script>
 </body>
 </html>

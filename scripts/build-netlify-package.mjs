@@ -13,7 +13,8 @@ const ZIP = "dist/slippy-morocco-netlify.zip";
 
 const FILES = [
   "index.html", "check.html", "manifest.webmanifest", "sw.js", "_headers",
-  "css/map.css", "js/app.js",
+  "css/map.css", "css/learn.css", "js/app.js", "js/learn.js",
+  "data/learn/en.json",
   "data/rabat/roads.geojson", "data/rabat/water-lines.geojson", "data/rabat/water-areas.geojson", "data/rabat/sea.geojson",
   "data/rabat/manifest.json", "data/rabat/README.md",
 ];

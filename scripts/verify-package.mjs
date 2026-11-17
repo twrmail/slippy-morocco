@@ -21,13 +21,13 @@ const has = (rel) => existsSync(path.join(root, rel));
 const read = (rel) => readFileSync(path.join(root, rel), "utf8");
 
 // 1. Required files at the ZIP root (no wrapper folder).
-const required = ["index.html", "check.html", "manifest.webmanifest", "sw.js", "_headers", "css/map.css", "js/app.js",
+const required = ["index.html", "check.html", "manifest.webmanifest", "sw.js", "_headers", "css/map.css", "css/learn.css", "js/app.js", "js/learn.js", "data/learn/en.json",
   "icons/favicon-48.png", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-192.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png",
   "data/rabat/roads.geojson", "data/rabat/water-lines.geojson", "data/rabat/water-areas.geojson", "data/rabat/sea.geojson", "data/rabat/manifest.json"];
 for (const rel of required) if (!has(rel)) fail("Missing from ZIP root: " + rel);
 
 // 2. Nothing unexpected (repo docs, scripts, workflows, source assets must not ship).
-const allowed = /^(index\.html|check\.html|manifest\.webmanifest|sw\.js|_headers|css\/[^/]+|js\/[^/]+|icons\/[^/]+|data\/rabat\/[^/]+)$/;
+const allowed = /^(index\.html|check\.html|manifest\.webmanifest|sw\.js|_headers|css\/[^/]+|js\/[^/]+|icons\/[^/]+|data\/rabat\/[^/]+|data\/learn\/[^/]+)$/;
 for (const rel of files) if (!allowed.test(rel)) fail("Unexpected file in ZIP: " + rel);
 
 // 3. Every local reference must resolve inside the package, and use relative paths.
@@ -38,6 +38,7 @@ const man = JSON.parse(read("manifest.webmanifest"));
 refs.add(man.start_url); for (const i of man.icons) refs.add(i.src);
 for (const m of read("sw.js").matchAll(/"(\.\/[^"]*)"/g)) refs.add(m[1]);
 for (const m of read("js/app.js").matchAll(/"(\.\/[^"]*)"/g)) refs.add(m[1]);
+for (const m of read("js/learn.js").matchAll(/"(\.\/[^"]*)"/g)) refs.add(m[1]);
 for (const ref of refs) {
   if (!ref.startsWith("./")) { fail("Not a ./relative path: " + ref); continue; }
   const rel = ref.slice(2) || "index.html";

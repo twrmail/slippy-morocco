@@ -1,11 +1,13 @@
 "use strict";
 // Slippy Morocco service worker: caches ONLY the small same-origin app shell.
+// That shell includes the "Learn the Game" view (its CSS, JS and lesson text), which therefore works offline.
 // It does NOT cache the MapLibre library (jsDelivr), the map glyph fonts, or the
 // ~18 MB GeoJSON map data, so the map itself still needs an internet connection.
 // To release a change: bump CACHE_NAME (old caches are deleted on activate).
-const CACHE_NAME = "slippy-morocco-shell-v5";
+const CACHE_NAME = "slippy-morocco-shell-v6";
 const APP_SHELL = [
-  "./", "./index.html", "./css/map.css", "./js/app.js", "./manifest.webmanifest",
+  "./", "./index.html", "./css/map.css", "./css/learn.css", "./js/app.js", "./js/learn.js",
+  "./data/learn/en.json", "./manifest.webmanifest",
   "./icons/favicon-48.png", "./icons/icon-192.png", "./icons/icon-512.png",
   "./icons/icon-maskable-192.png", "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png"
 ];
