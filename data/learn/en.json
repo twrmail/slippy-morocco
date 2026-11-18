@@ -1,0 +1,178 @@
+{
+  "lang": "en",
+  "ui": {
+    "title": "Learn the Game",
+    "subtitle": "Football basics",
+    "pitchLabel": "A football pitch with two teams of eleven players, a referee and the ball at the centre spot",
+    "keyLabel": "Tap a position to see it on the pitch",
+    "loadError": "The lessons could not load. Check your connection and reload.",
+    "illustration": "Illustrative layout, not a real match."
+  },
+  "roles": {
+    "gk": {
+      "short": "GK",
+      "name": "Goalkeeper"
+    },
+    "def": {
+      "short": "D",
+      "name": "Defenders"
+    },
+    "mid": {
+      "short": "M",
+      "name": "Midfielders"
+    },
+    "fwd": {
+      "short": "F",
+      "name": "Forwards"
+    },
+    "ref": {
+      "short": "R",
+      "name": "Referee"
+    }
+  },
+  "lessons": [
+    {
+      "id": "object",
+      "focus": "goals",
+      "title": "The object of the game",
+      "paragraphs": [
+        "Two teams compete to score goals. A goal counts when the whole ball crosses the goal line, between the posts and under the crossbar.",
+        "The team with the most goals at the end wins. In World Cup knockout matches, a draw is settled by extra time and, if needed, a penalty shoot-out."
+      ]
+    },
+    {
+      "id": "players",
+      "focus": "all",
+      "title": "The players",
+      "paragraphs": [
+        "Each team has 11 players on the pitch, including one goalkeeper. Substitutes wait on the bench and can replace tired or injured players.",
+        "Everyone may play the ball with their feet, legs, chest or head. Only the goalkeeper may use their hands and arms, and only inside their own penalty area."
+      ]
+    },
+    {
+      "id": "positions",
+      "focus": "all",
+      "title": "The positions",
+      "items": [
+        {
+          "term": "Goalkeeper",
+          "text": "protects the goal and is the only player allowed to use their hands."
+        },
+        {
+          "term": "Defenders",
+          "text": "protect their team's end and stop attacks."
+        },
+        {
+          "term": "Midfielders",
+          "text": "connect defence and attack, win the ball back and create chances."
+        },
+        {
+          "term": "Forwards",
+          "text": "concentrate on creating and scoring goals."
+        }
+      ],
+      "paragraphs": [
+        "Teams choose how many players to put in each line. The pitch above shows a common set-up called 4-4-2: four defenders, four midfielders and two forwards."
+      ]
+    },
+    {
+      "id": "kickoff",
+      "focus": "centre",
+      "title": "Starting play",
+      "paragraphs": [
+        "The match is played in two halves of 45 minutes, with a break of up to 15 minutes at half-time. The referee adds extra time at the end of each half for stoppages.",
+        "Each half begins with a kick-off from the centre spot. Every player must be in their own half, and the opponents must stay outside the centre circle until the ball is kicked. After a goal, the team that conceded kicks off."
+      ]
+    },
+    {
+      "id": "moving",
+      "focus": "ball",
+      "title": "Moving the ball",
+      "items": [
+        {
+          "term": "Passing",
+          "text": "sending the ball to a teammate, along the ground or through the air."
+        },
+        {
+          "term": "Dribbling",
+          "text": "running with the ball under close control."
+        },
+        {
+          "term": "Shooting",
+          "text": "kicking or heading the ball at the goal to score."
+        }
+      ]
+    },
+    {
+      "id": "offside",
+      "focus": "offside",
+      "title": "Offside",
+      "paragraphs": [
+        "Attackers may not simply wait near the opponents' goal. When a teammate plays the ball, an attacker is in an offside position if any part of their head, body or feet is in the opponents' half and closer to the goal line than both the ball and the second-last opponent. The goalkeeper counts as an opponent, so this is usually the last defender.",
+        "Being in an offside position is not an offence by itself. A player is penalised only if they then take part in the play, for example by receiving the ball. There is no offside from a throw-in, goal kick or corner kick, and a player cannot be offside in their own half.",
+        "The dashed line on the pitch shows the idea: the line level with the second-last defender. When offside is called, the other team gets a free kick."
+      ]
+    },
+    {
+      "id": "fouls",
+      "focus": "all",
+      "title": "Fouls",
+      "paragraphs": [
+        "Players may challenge for the ball, including a fair tackle or shoulder-to-shoulder contact. A foul is careless, reckless or excessive play against an opponent. The other team is given a free kick."
+      ],
+      "items": [
+        {
+          "term": "Not allowed",
+          "text": "kicking or tripping an opponent, pushing, holding, charging dangerously, or deliberately handling the ball (apart from the goalkeeper inside their area)."
+        }
+      ]
+    },
+    {
+      "id": "restarts",
+      "focus": "edges",
+      "title": "Restarts",
+      "items": [
+        {
+          "term": "Throw-in",
+          "text": "when the ball crosses the side line, the team that did not touch it last throws it back in with both hands, from behind and over the head."
+        },
+        {
+          "term": "Goal kick",
+          "text": "when the attackers send the ball over the goal line outside the goal, the defending team kicks it from inside their goal area."
+        },
+        {
+          "term": "Corner kick",
+          "text": "when the defenders send it over their own goal line, the attackers kick it from the corner arc."
+        },
+        {
+          "term": "Free kick",
+          "text": "awarded after a foul or offside. A direct free kick can score straight away; an indirect one must touch another player first. Opponents must stand at least 9.15 metres (10 yards) back."
+        }
+      ]
+    },
+    {
+      "id": "penalty",
+      "focus": "penalty",
+      "title": "Penalty kicks",
+      "paragraphs": [
+        "If a defender commits a foul that would normally give a direct free kick inside their own penalty area, the attacking team is awarded a penalty kick.",
+        "The ball is placed on the penalty spot, 11 metres (12 yards) from the goal. Only the kicker and the goalkeeper take part. Everyone else waits outside the area, and the goalkeeper must keep a foot on the goal line until the ball is kicked."
+      ]
+    },
+    {
+      "id": "referee",
+      "focus": "ref",
+      "title": "The referee",
+      "paragraphs": [
+        "The referee controls the match, applies the rules and keeps time. Assistant referees help with offside and with whether the ball has left the pitch. The video assistant referee (VAR) can review serious incidents such as goals, penalties and red cards.",
+        "A yellow card is an official warning. A second yellow card in the same match becomes a red card. A red card means the player is sent off, cannot be replaced, and their team plays with one fewer player. Direct red cards are for very serious offences."
+      ]
+    }
+  ],
+  "footer": {
+    "source": "A simplified guide based on the IFAB Laws of the Game 2026/27. The full Laws are published at theifab.com.",
+    "sourceLinkText": "theifab.com",
+    "sourceLink": "https://www.theifab.com/",
+    "independence": "Slippy Morocco is an independent project, not affiliated with any football governing body or tournament organiser."
+  }
+}
