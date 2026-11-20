@@ -1,0 +1,43 @@
+{
+  "kind": "research-candidates-not-production-data",
+  "area": "Rabat-Sale-Bouregreg provisional study window",
+  "bbox_west_south_east_north": [
+    -6.98,
+    33.9,
+    -6.7,
+    34.12
+  ],
+  "source": "OpenStreetMap contributors via OpenStreetMap France extract mirror",
+  "source_url": "https://download.openstreetmap.fr/extracts/africa/morocco.osm.pbf",
+  "source_pbf_sha256": "44b0b71d5b29635ecba94559c0d10cabed5848b1d41bdf057db197a1967bfaad",
+  "source_pbf_bytes": 277043397,
+  "source_data_timestamp": "2026-11-19T02:31:50Z",
+  "license": "Open Database License (ODbL) 1.0",
+  "attribution": "© OpenStreetMap contributors",
+  "attribution_url": "https://www.openstreetmap.org/copyright",
+  "outputs": {
+    "candidates.geojson": {
+      "feature_count": 1031,
+      "bytes": 416454,
+      "sha256": "a4fda12c6735b1cbfb804af42d5c27872d9abb91b1d398f1b15eb7c3bcd9974a"
+    }
+  },
+  "counts_by_category_guess": {
+    "eat": 500,
+    "football": 21,
+    "see": 326,
+    "stay": 184
+  },
+  "named_counts_by_category_guess": {
+    "eat": 433,
+    "football": 6,
+    "see": 152,
+    "stay": 157
+  },
+  "skipped_non_visitor_features": {},
+  "notes": [
+    "Candidates are unreviewed. Category is a guess from OSM tags.",
+    "Areas and lines are reduced to a representative point (point_from says how).",
+    "OSM tags may be wrong, missing or out of date. Nothing here is verified."
+  ]
+}
