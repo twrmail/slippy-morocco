@@ -1,0 +1,66 @@
+{
+  "type": "FeatureCollection",
+  "name": "rabat-football",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.8890628,
+          33.9597866
+        ]
+      },
+      "properties": {
+        "id": "rabat-prince-moulay-abdellah-stadium",
+        "name": "Prince Moulay Abdellah Stadium",
+        "aliases": [
+          "Stade Prince Moulay Abdellah",
+          "Moulay Abdellah Stadium",
+          "Complexe Sportif Prince Moulay Abdellah"
+        ],
+        "category": "football",
+        "description": "Rabat's large football stadium, rebuilt and reopened in September 2025, about 7 km from the city centre. No match or tournament role is assigned here until officially confirmed.",
+        "address": null,
+        "address_status": "unverified",
+        "address_source": null,
+        "osm_type": "relation",
+        "osm_id": 3728408,
+        "source": "OpenStreetMap",
+        "source_id": "relation/3728408",
+        "position_from": "area-centroid",
+        "match_status": "matched",
+        "verified_at": null,
+        "status": "verify",
+        "featured": false,
+        "guide_topic": "match-day-stadiums",
+        "operating_status": "unverified",
+        "website": null,
+        "capacity": {
+          "status": "VERIFY",
+          "seats": null,
+          "reported": [
+            {
+              "seats": 68095,
+              "source": "SONARGES, as relayed in project research; not re-checked"
+            },
+            {
+              "seats": 68500,
+              "source": "Morocco World News, 4 Sep 2025"
+            },
+            {
+              "seats": 68700,
+              "source": "Populous (architect) and stadiumdb.com"
+            },
+            {
+              "seats": 69500,
+              "source": "Wikipedia, citing an earlier source"
+            }
+          ],
+          "note": "Reported figures disagree. Do not show a number to visitors until an official source confirms it."
+        },
+        "match_note": "Matched by location, not by name: this OSM stadium relation has no name tag, but its centre is about 50 m from the coordinates Wikipedia gives for the stadium. Another unnamed stadium relation (19165479) lies about 350 m away, probably a sub-facility; not used."
+      }
+    }
+  ]
+}

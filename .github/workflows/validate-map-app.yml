@@ -19,6 +19,8 @@ jobs:
           node-version: 22
       - name: Validate application and geographic data
         run: node scripts/validate-map-app.mjs
+      - name: Validate the points-of-interest data layer
+        run: node scripts/validate-pois.mjs
       - name: Check JavaScript syntax
         run: |
           node --check js/app.js

@@ -1,0 +1,112 @@
+{
+  "type": "FeatureCollection",
+  "name": "rabat-stay",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.8368905,
+          33.9906464
+        ]
+      },
+      "properties": {
+        "id": "rabat-sofitel-jardin-des-roses",
+        "name": "Sofitel Rabat Jardin des Roses",
+        "aliases": [
+          "Sofitel Rabat"
+        ],
+        "category": "stay",
+        "description": "Large hotel with extensive gardens in the quiet Souissi district.",
+        "address": "Avenue Imam Malek, Impasse Souissi, Souissi, 10000 Rabat",
+        "address_status": "verified",
+        "address_source": "https://sofitel.accor.com/en/hotels/6813.html",
+        "osm_type": "way",
+        "osm_id": 332075980,
+        "source": "OpenStreetMap",
+        "source_id": "way/332075980",
+        "position_from": "area-centroid",
+        "match_status": "matched",
+        "verified_at": "2026-11-20",
+        "status": "verify",
+        "featured": false,
+        "guide_topic": "where-to-stay",
+        "operating_status": "unverified",
+        "website": null,
+        "match_note": "OSM hotel polygon carrying the full name (point is its centre). It lies about 55 m from the coordinates in a third-party listing (HotelPlanner); the operator's own page gives an address, not coordinates. Two other nearby OSM ways are named just 'Sofitel'; not used."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.8279059,
+          34.0175741
+        ]
+      },
+      "properties": {
+        "id": "rabat-le-diwan-mgallery",
+        "name": "Le Diwan Hotel Rabat - MGallery Collection",
+        "aliases": [
+          "Le Diwan Rabat",
+          "MGallery Le Diwan"
+        ],
+        "category": "stay",
+        "description": "Hotel on Place de l'Unité Africaine in the Hassan district, close to Rabat Ville railway station.",
+        "address": "Place de l'Unité Africaine, Hassan District, 10005 Rabat",
+        "address_status": "verified",
+        "address_source": "https://all.accor.com/hotel/2820/index.en.shtml",
+        "osm_type": "node",
+        "osm_id": 1151736192,
+        "source": "OpenStreetMap",
+        "source_id": "node/1151736192",
+        "position_from": "point",
+        "match_status": "matched",
+        "verified_at": null,
+        "status": "verify",
+        "featured": false,
+        "guide_topic": "where-to-stay",
+        "operating_status": "unverified",
+        "website": null,
+        "match_note": "Only OSM hotel named Le Diwan. The OSM point is about 400 m from the GPS point the operator publishes for the hotel (34.018028, -6.823583). Which is right is unresolved; do not call this position verified."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.8444049,
+          34.0038692
+        ]
+      },
+      "properties": {
+        "id": "rabat-marriott",
+        "name": "Rabat Marriott Hotel",
+        "aliases": [
+          "Marriott Rabat"
+        ],
+        "category": "stay",
+        "description": "Modern hotel in the Agdal district, close to Rabat-Agdal railway station.",
+        "address": "Avenue Inaouin, Arribat Center Agdal, 10000 Rabat",
+        "address_status": "verified",
+        "address_source": "https://www.marriott.com/en-us/hotels/rbamc-rabat-marriott-hotel/reviews/",
+        "osm_type": "way",
+        "osm_id": 1384362541,
+        "source": "OpenStreetMap",
+        "source_id": "way/1384362541",
+        "position_from": "area-centroid",
+        "match_status": "matched",
+        "verified_at": null,
+        "status": "verify",
+        "featured": false,
+        "guide_topic": "where-to-stay",
+        "operating_status": "unverified",
+        "website": null,
+        "match_note": "OSM hotel polygon with the full name (point is its centre). Plausibly in Agdal; position not yet cross-checked against an operator coordinate."
+      }
+    }
+  ]
+}

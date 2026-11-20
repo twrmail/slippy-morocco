@@ -1,0 +1,105 @@
+{
+  "type": "FeatureCollection",
+  "name": "rabat-eat",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.8419277,
+          34.0218326
+        ]
+      },
+      "properties": {
+        "id": "rabat-dar-naji",
+        "name": "Dar Naji",
+        "aliases": [
+          "Restaurant Dar Naji"
+        ],
+        "category": "eat",
+        "description": "Moroccan restaurant serving traditional dishes such as couscous and tagines. More than one branch uses this name; this record is the Avenue Jazirat Al Arabe branch.",
+        "address": "Avenue Jazirat Al Arabe, Rabat",
+        "address_status": "cross-checked",
+        "address_source": "Fodor's Rabat restaurants listing; mapstr entry (neither is the operator). Several branches exist.",
+        "osm_type": "node",
+        "osm_id": 1153033252,
+        "source": "OpenStreetMap",
+        "source_id": "node/1153033252",
+        "position_from": "point",
+        "match_status": "matched",
+        "verified_at": null,
+        "status": "verify",
+        "featured": false,
+        "guide_topic": "eat",
+        "operating_status": "unverified",
+        "website": null,
+        "match_note": "Chosen because its OSM address street (Rue Jazirat Al Arab) matches the Avenue Jazirat Al Arabe branch. Three other OSM nodes named Dar Naji are other branches and are not used."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.8469626,
+          33.9967094
+        ]
+      },
+      "properties": {
+        "id": "rabat-dar-al-fawakih-agdal",
+        "name": "Dar Al Fawakih Rabat - Agdal",
+        "aliases": [
+          "Dar Al Fawakih"
+        ],
+        "category": "eat",
+        "description": "Casual neighbourhood restaurant in Agdal; the menu includes juices, pizza, pasta and Moroccan dishes.",
+        "address": "Avenue Al Atlas, Rabat 10080",
+        "address_status": "cross-checked",
+        "address_source": "kupi.com listing and mwnlifestyle.com article (neither is the operator).",
+        "osm_type": "node",
+        "osm_id": 2430191158,
+        "source": "OpenStreetMap",
+        "source_id": "node/2430191158",
+        "position_from": "point",
+        "match_status": "matched",
+        "verified_at": null,
+        "status": "verify",
+        "featured": false,
+        "guide_topic": "eat",
+        "operating_status": "unverified",
+        "website": null,
+        "match_note": "Medium confidence. Chosen because it stands beside a restaurant tagged 23 Avenue Atlas (the street named by sources); the OSM node itself has no address tag. Other OSM nodes named Dar Al Fawakih are on Avenue Maghreb Arabe and elsewhere."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "rabat-marea",
+        "name": "Restaurant Marea",
+        "aliases": [
+          "Marea"
+        ],
+        "category": "eat",
+        "description": "Seafood restaurant in the Hassan district, near Hassan Tower.",
+        "address": "9 Rue Al Mariniyine, Hassan, 10020 Rabat",
+        "address_status": "cross-checked",
+        "address_source": "visitrabat.com listing, hotels.com guide and restaurantsforkings.com (none is the operator).",
+        "osm_type": null,
+        "osm_id": null,
+        "source": "unmatched",
+        "source_id": null,
+        "position_from": null,
+        "match_status": "not-in-osm",
+        "verified_at": null,
+        "status": "placeholder",
+        "featured": false,
+        "guide_topic": "eat",
+        "operating_status": "unverified",
+        "website": null,
+        "match_note": "No OSM feature named Marea (or Maréa) among the 1,031 candidates. A restaurant named 'la marée' exists about 10 km south and is a different place."
+      }
+    }
+  ]
+}

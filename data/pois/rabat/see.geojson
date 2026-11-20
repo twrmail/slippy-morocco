@@ -1,0 +1,112 @@
+{
+  "type": "FeatureCollection",
+  "name": "rabat-see",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "id": "rabat-kasbah-udayas",
+        "name": "Kasbah of the Udayas",
+        "aliases": [
+          "Kasbah des Oudayas",
+          "Oudaya Kasbah",
+          "Kasbah des Oudaias"
+        ],
+        "category": "see",
+        "description": "Walled old fortress quarter above the mouth of the Bou Regreg river, with narrow whitewashed streets, gardens and Atlantic views.",
+        "address": null,
+        "address_status": "unverified",
+        "address_source": null,
+        "osm_type": null,
+        "osm_id": null,
+        "source": "unmatched",
+        "source_id": null,
+        "position_from": null,
+        "match_status": "not-in-osm",
+        "verified_at": null,
+        "status": "placeholder",
+        "featured": true,
+        "guide_topic": "must-see",
+        "operating_status": "unverified",
+        "website": null,
+        "match_note": "No OSM feature for the Kasbah as a whole among the candidates. Parts exist (Musee des Oudayas way/283167034, gates, cannons, viewpoints) but none is the Kasbah itself. Needs a decision: use one part as the pin, or add a separately documented point."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.8227859,
+          34.0241231
+        ]
+      },
+      "properties": {
+        "id": "rabat-hassan-tower",
+        "name": "Hassan Tower",
+        "aliases": [
+          "Tour Hassan",
+          "Hassan Tower and Mausoleum of Mohammed V"
+        ],
+        "category": "see",
+        "description": "Unfinished medieval minaret beside the Mausoleum of Mohammed V; the two are usually visited together.",
+        "address": null,
+        "address_status": "unverified",
+        "address_source": null,
+        "osm_type": "way",
+        "osm_id": 253426261,
+        "source": "OpenStreetMap",
+        "source_id": "way/253426261",
+        "position_from": "area-centroid",
+        "match_status": "matched",
+        "verified_at": null,
+        "status": "verify",
+        "featured": true,
+        "guide_topic": "must-see",
+        "operating_status": "unverified",
+        "website": null,
+        "wikidata": "Q579331",
+        "match_note": "OSM attraction polygon named Tour Hassan. The Mausoleum of Mohammed V is a separate OSM feature next to it (not used here)."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.8207822,
+          34.0063743
+        ]
+      },
+      "properties": {
+        "id": "rabat-chellah",
+        "name": "Chellah",
+        "aliases": [
+          "Chellah Castle",
+          "Chellah Necropolis",
+          "Sala Colonia"
+        ],
+        "category": "see",
+        "description": "Walled archaeological site with Roman ruins and a medieval Islamic necropolis on the edge of the city.",
+        "address": null,
+        "address_status": "unverified",
+        "address_source": null,
+        "osm_type": "node",
+        "osm_id": 5042469923,
+        "source": "OpenStreetMap",
+        "source_id": "node/5042469923",
+        "position_from": "point",
+        "match_status": "matched",
+        "verified_at": null,
+        "status": "verify",
+        "featured": true,
+        "guide_topic": "must-see",
+        "operating_status": "unverified",
+        "website": null,
+        "wikidata": "Q2314811",
+        "match_note": "OSM archaeological-site point named Chellah. A separate polygon, Necropole du Chellah (way/190237527), also exists; not used."
+      }
+    }
+  ]
+}

@@ -25,6 +25,10 @@ This is a geographic base layer, not yet a visitor product. Terrain, buildings, 
 5. Do not treat unknown, unverified, or unavailable data as confirmed.
 6. Keep this repository independent from Pennsylvania Slippy projects and their data.
 
+## Points of interest (data only, not yet on the map)
+
+Hotels, restaurants, sights and stadiums are being built as a separate layer in `data/pois/`, kept apart from the roads and water. Each place is one record matched to OpenStreetMap; unverified facts are marked as such. See [`docs/poi-layer.md`](docs/poi-layer.md).
+
 ## Working geography
 
 The initial study area is Rabat–Salé and the Bouregreg corridor, with enough surrounding context to understand the Atlantic coast and connected urban geography. The first extraction uses a provisional rectangular window, documented in `data/rabat/README.md` and the generated manifest. It is not an official administrative boundary.
