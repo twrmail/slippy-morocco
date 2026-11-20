@@ -8,6 +8,10 @@ name: Acquire Rabat POI candidates (research)
 
 on:
   workflow_dispatch:
+  # TEMPORARY: lets the first run start from this PR branch before the workflow exists on main. Removed before merge.
+  push:
+    branches: [feat/rabat-poi-layer-01]
+    paths: [".github/workflows/acquire-rabat-poi-candidates.yml"]
 
 permissions:
   contents: write   # only to push the research/* side branch
