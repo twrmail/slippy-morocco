@@ -86,10 +86,18 @@ The roads/water base and the POI candidates can come from different OSM snapshot
 
 ## Validation
 
-`node scripts/validate-pois.mjs` (also run in CI) checks: all four files exist and are FeatureCollections; unique ids;
-required fields and allowed values; no unknown or Google-style fields; matched records have a Point inside the study
-window, an OSM id and a consistent `source_id`; unmatched records have no geometry; featured records have a `guide_topic`;
-football records carry a `VERIFY` capacity; no file in the folder is unlisted; manifest checksums match.
+`node scripts/validate-pois.mjs` (also run in CI) checks:
+
+- all four files exist and are FeatureCollections; ids are unique; required fields and allowed values are present;
+- **forbidden third-party data at every depth**: no field names that look like ratings, reviews, photos, prices, hours, business status or Google place ids, and no Google Maps/Search links in any text, including inside nested objects such as `capacity`;
+- nested objects (`capacity`, `capacity.reported`) accept only their documented keys;
+- matched records have a Point inside the study window, an OSM id and a consistent `source_id`; **no two records share one OSM feature**;
+- unmatched records have no geometry; featured records have a `guide_topic`; football records carry a `VERIFY` capacity until an official source is recorded;
+- **dates are real calendar dates** and not in the future (`2026-02-31` is refused);
+- **the manifest's provenance is complete and well formed**: source licence and attribution, workflow file exists, run id, acquisition date, OSM data timestamp (a real UTC time, not later than the acquisition day), PBF and candidates checksums (64 hex), research branch and commit (40 hex) consistent with the acquisition date, file checksums, counts and byte sizes;
+- no unlisted file sits in the POI folder.
+
+`node scripts/test-validate-pois.mjs` (also in CI) breaks the data in 31 different ways on a temporary copy and confirms the validator fails each time with the expected message, and passes the untouched data.
 
 ## Not in this step
 

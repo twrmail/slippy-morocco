@@ -21,6 +21,8 @@ jobs:
         run: node scripts/validate-map-app.mjs
       - name: Validate the points-of-interest data layer
         run: node scripts/validate-pois.mjs
+      - name: Prove the POI validator rejects bad data
+        run: node scripts/test-validate-pois.mjs
       - name: Check JavaScript syntax
         run: |
           node --check js/app.js
