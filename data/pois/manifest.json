@@ -1,0 +1,58 @@
+{
+  "project": "slippy-morocco",
+  "layer": "pois",
+  "schema_version": 1,
+  "area": "rabat",
+  "area_note": "Rabat-Sale-Bouregreg provisional study window, west=-6.98 south=33.90 east=-6.70 north=34.12. Same window as data/rabat.",
+  "description": "Separate points-of-interest layer. One canonical record per place. Roads and water stay in data/rabat. Not yet loaded by the map app.",
+  "categories": [
+    "stay",
+    "eat",
+    "see",
+    "football"
+  ],
+  "osm_source": {
+    "name": "OpenStreetMap contributors via OpenStreetMap France extract mirror",
+    "url": "https://download.openstreetmap.fr/extracts/africa/morocco.osm.pbf",
+    "license": "Open Database License (ODbL) 1.0",
+    "attribution": "© OpenStreetMap contributors",
+    "attribution_url": "https://www.openstreetmap.org/copyright"
+  },
+  "acquisition": {
+    "workflow": ".github/workflows/acquire-rabat-poi-candidates.yml",
+    "workflow_run_id": 44713785383,
+    "acquired_on": "2026-11-20",
+    "pbf_data_timestamp": "2026-11-19T02:31:50Z",
+    "pbf_bytes": 277043397,
+    "pbf_sha256": "44b0b71d5b29635ecba94559c0d10cabed5848b1d41bdf057db197a1967bfaad",
+    "candidates_file": "research/poi-candidates/rabat-20261120/candidates.geojson",
+    "candidates_sha256": "a4fda12c6735b1cbfb804af42d5c27872d9abb91b1d398f1b15eb7c3bcd9974a",
+    "candidates_count": 1031,
+    "research_branch": "research/rabat-poi-candidates-20261120",
+    "research_branch_commit": "70276e29220411cbba731497d4304e990e9f159d",
+    "note": "The candidates file is research only and is not part of this layer. This is a newer OSM snapshot than the road and water base (morocco-2026-10-27)."
+  },
+  "non_osm_sources": "Addresses and descriptions are checked against the sources named in each record's address_source. No ratings, photos, opening hours or business status are copied from Google or any other listing service.",
+  "files": {
+    "rabat/stay.geojson": {
+      "feature_count": 3,
+      "bytes": 4043,
+      "sha256": "5652a7ad5fde6f6739b22f5976373b27f9fc4847649cdea704374112392f0238"
+    },
+    "rabat/eat.geojson": {
+      "feature_count": 3,
+      "bytes": 3861,
+      "sha256": "0c6b0642d69fa52b4330d031b31db7f456e8104163ca69225dfedcfc5d4c78c2"
+    },
+    "rabat/see.geojson": {
+      "feature_count": 3,
+      "bytes": 3685,
+      "sha256": "143cdcd0aa84557a223ae5510ba7907a93e1f646c6a6443e881f9f73645ad1f8"
+    },
+    "rabat/football.geojson": {
+      "feature_count": 1,
+      "bytes": 2321,
+      "sha256": "f9cc36a5c1d11ec306ca25043a41feb86ebd34296bdebe158788a68350a7d018"
+    }
+  }
+}
